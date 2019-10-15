@@ -4,6 +4,11 @@ CREATE DATABASE flight;
 -- create user and grant permission to flight database
 GRANT ALL PRIVILEGES ON flight.* TO 'application'@'%' identified by 'application';
 
+-- Create sequence
+CREATE TABLE `hibernate_sequence` (
+  `next_val` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
 -- create airport table
 CREATE TABLE `airports` (
   `id` bigint(20) NOT NULL,
